@@ -1,4 +1,4 @@
 Ludum Dare 59
 
-Code : MIT License - MIT License
+Code : MIT License - Barnabe Wild
 
