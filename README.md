@@ -1,4 +1,4 @@
-Ludum Dare 59
+Ludum Dare 58
 
 The MIT License (MIT)
 Copyright © 2025 <Barnabe_Wild>
