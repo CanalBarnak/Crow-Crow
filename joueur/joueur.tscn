@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0sif6754ly4l"]
+
+[ext_resource type="Script" uid="uid://csncr77eil2gd" path="res://joueur/joueur.gd" id="1_plyhm"]
+[ext_resource type="Script" uid="uid://bdt30j7kfass3" path="res://joueur/grappling_hook/grappling_hook.gd" id="2_dasju"]
+[ext_resource type="Script" uid="uid://cooeq8hv85so" path="res://joueur/mouse_spawn.gd" id="2_uswo7"]
+[ext_resource type="PackedScene" uid="uid://dar7xuvskmql7" path="res://joueur/corde/rope.tscn" id="3_plyhm"]
+[ext_resource type="PackedScene" uid="uid://oqwqlkljcdso" path="res://Classique/glb/Classique.glb" id="5_xqvgb"]
+
+[sub_resource type="Curve" id="Curve_plyhm"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a3vip"]
+radius = 0.244694
+height = 0.646222
+
+[node name="Joueur" type="CharacterBody3D"]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0, 0)
+collision_layer = 7
+collision_mask = 23
+floor_max_angle = 1.20428
+script = ExtResource("1_plyhm")
+
+[node name="Rope" parent="." instance=ExtResource("3_plyhm")]
+transform = Transform3D(1, 0, 4.26326e-14, -1.06581e-13, 1, 0, -2.55795e-13, 0, 1, -5.35743e-08, 0.483153, -0.306409)
+
+[node name="grappling_controller" type="Node3D" parent="." node_paths=PackedStringArray("ray", "rope")]
+script = ExtResource("2_dasju")
+ray = NodePath("../Pivot_camera/Gimbal_camera/SpringCam_Arm/Camera3D/grapple_ray")
+rope = NodePath("../Rope")
+hook_speed = SubResource("Curve_plyhm")
+
+[node name="Pivot_camera" type="Node3D" parent="."]
+
+[node name="Gimbal_camera" type="Node3D" parent="Pivot_camera"]
+
+[node name="SpringCam_Arm" type="SpringArm3D" parent="Pivot_camera/Gimbal_camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1.74846e-07)
+spring_length = 2.0
+margin = 1.0
+
+[node name="Camera3D" type="Camera3D" parent="Pivot_camera/Gimbal_camera/SpringCam_Arm"]
+transform = Transform3D(1, -4.52535e-08, 1.68888e-07, 0, 0.965926, 0.258819, -1.74846e-07, -0.258819, 0.965926, -1, 0, 2)
+v_offset = 0.6
+current = true
+far = 250.0
+script = ExtResource("2_uswo7")
+
+[node name="grapple_ray" type="RayCast3D" parent="Pivot_camera/Gimbal_camera/SpringCam_Arm/Camera3D"]
+transform = Transform3D(1, 0, -1.74846e-07, -4.52535e-08, 0.965926, -0.258819, 1.68888e-07, 0.258819, 0.965926, 3.57628e-07, 0.0977065, -2.36159)
+target_position = Vector3(0, 0, -75)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Pivot_camera/Gimbal_camera/SpringCam_Arm/Camera3D/grapple_ray"]
+transform = Transform3D(1, 0, 0, 3.25831e-27, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -2.5)
+cast_shadow = 0
+radius = 0.01
+height = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998256, 0.0590276, 0, -0.0590276, 0.998256, 0, 0.277118, 0)
+shape = SubResource("CapsuleShape3D_a3vip")
+
+[node name="lapin_mecanique" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.198339, 0)
+
+[node name="regarde le joueur_1" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0788752, 0.409173, 0.0757657)
+visible = false
+radius = 0.128857
+
+[node name="regarde le joueur_2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0768165, 0.409173, 0.0757657)
+visible = false
+radius = 0.128857
+
+[node name="blockbench_export" parent="." instance=ExtResource("5_xqvgb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false

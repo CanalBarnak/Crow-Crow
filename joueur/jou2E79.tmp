@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0sif6754ly4l"]
+
+[ext_resource type="Script" path="res://scènes/Joueur/scripts/joueur.gd" id="1_4to4a"]
+[ext_resource type="PackedScene" uid="uid://bxjy8m1wp7h1u" path="res://scènes/Joueur/GLB/lapin_mécanique.glb" id="1_mtyuh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a3vip"]
+radius = 0.244694
+height = 0.646222
+
+[node name="Joueur" type="CharacterBody3D"]
+script = ExtResource("1_4to4a")
+
+[node name="Pivot_cam" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.352181, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot_cam"]
+transform = Transform3D(-1, -3.55271e-15, 8.74228e-08, 2.26267e-08, 0.965926, 0.258819, -8.44439e-08, 0.258819, -0.965926, 0, 1, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998256, 0.0590276, 0, -0.0590276, 0.998256, 0, 0.277118, 0)
+shape = SubResource("CapsuleShape3D_a3vip")
+
+[node name="lapin_mécanique" parent="." instance=ExtResource("1_mtyuh")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 0, 0.198339, 0)
