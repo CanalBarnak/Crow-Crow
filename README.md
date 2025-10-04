@@ -1,3 +1,4 @@
 Ludum Dare 59
 
-MIT License
+Code : MIT License - MIT License
+
