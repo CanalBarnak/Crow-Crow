@@ -25,7 +25,7 @@ var energie:int = 600
 var danger_level:int=0
 #disable encounter
 var toggle_encounter:bool=false
-
+var match_three_count:int =0
 #original spawn point , buggé, dans le fond, ça break nul si je met vide.
 #var saved_location:Vector3 = Vector3(-89,-4.94,73.0)
 
@@ -38,6 +38,8 @@ var send_speech:bool
 var speech_content:String
 
 var location_scene: String = "in_world_first_spawn"
+
+var beam_on:bool = true
 func _ready()->void:
 	print("Encounter: ",toggle_encounter)
 	

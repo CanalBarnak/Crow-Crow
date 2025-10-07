@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci7vggeiv1uny"]
+
+[ext_resource type="PackedScene" uid="uid://cndhjpj0sjggx" path="res://modules/Paysages_pixel/ete/ligne/chemin_p_ligne.tscn" id="1_4xc5d"]
+[ext_resource type="PackedScene" uid="uid://fjoyjv2o01yh" path="res://modules/Paysages_pixel/ete/uphill/uphill.tscn" id="2_2qke3"]
+
+[node name="Long road" type="Node3D"]
+
+[node name="chemin_p_ligne" parent="." instance=ExtResource("1_4xc5d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 1)
+
+[node name="chemin_p_ligne2" parent="." instance=ExtResource("1_4xc5d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1)
+
+[node name="chemin_p_ligne3" parent="." instance=ExtResource("1_4xc5d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -3)
+
+[node name="chemin_p_ligne4" parent="." instance=ExtResource("1_4xc5d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -5)
+
+[node name="uphill3" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="uphill4" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="uphill5" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="uphill6" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="uphill7" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="uphill8" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="uphill9" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="uphill10" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+
+[node name="uphill11" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -5)
+
+[node name="uphill12" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -4)
+
+[node name="uphill13" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -3)
+
+[node name="uphill14" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -2)
+
+[node name="uphill15" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -1)
+
+[node name="uphill16" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 0)
+
+[node name="uphill17" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 1)
+
+[node name="uphill18" parent="." instance=ExtResource("2_2qke3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 2)

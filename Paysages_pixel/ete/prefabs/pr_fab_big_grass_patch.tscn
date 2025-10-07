@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://ces77d6c0gbl1"]
+
+[ext_resource type="PackedScene" uid="uid://ngh04sjphaha" path="res://modules/Paysages_pixel/ete/gazon/gazon.tscn" id="1_kegnf"]
+
+[node name="PrFab_big_grass_patch" type="Node3D"]
+
+[node name="gazon" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 4)
+
+[node name="gazon2" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 2)
+
+[node name="gazon3" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0)
+
+[node name="gazon4" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, -2)
+
+[node name="gazon5" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, -4)
+
+[node name="gazon6" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 4)
+
+[node name="gazon7" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 2)
+
+[node name="gazon8" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 0)
+
+[node name="gazon9" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -2)
+
+[node name="gazon10" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -4)
+
+[node name="gazon11" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 4)
+
+[node name="gazon12" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2)
+
+[node name="gazon13" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="gazon14" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
+
+[node name="gazon15" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4)
+
+[node name="gazon16" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 4)
+
+[node name="gazon17" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 2)
+
+[node name="gazon18" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 0)
+
+[node name="gazon19" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -2)
+
+[node name="gazon20" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -4)
+
+[node name="gazon21" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, 4)
+
+[node name="gazon22" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, 2)
+
+[node name="gazon23" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, 0)
+
+[node name="gazon24" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -2)
+
+[node name="gazon25" parent="." instance=ExtResource("1_kegnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4)

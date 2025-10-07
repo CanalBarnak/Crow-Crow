@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://on11ttusn112"]
+
+[ext_resource type="PackedScene" uid="uid://dolufngikdhoa" path="res://modules/Paysages_pixel/ete/cliff/scissored_cliff/middle.tscn" id="1_pbx0g"]
+[ext_resource type="PackedScene" uid="uid://ci84ge5dtq0l5" path="res://modules/Paysages_pixel/ete/cliff/scissored_cliff/base.tscn" id="2_tvx4e"]
+[ext_resource type="PackedScene" uid="uid://cawd7yupeiajn" path="res://modules/Paysages_pixel/ete/cliff/scissored_cliff/top.tscn" id="3_65aak"]
+
+[node name="sample_cliff" type="Node3D"]
+
+[node name="middle" parent="." instance=ExtResource("1_pbx0g")]
+
+[node name="base" parent="." instance=ExtResource("2_tvx4e")]
+
+[node name="top" parent="." instance=ExtResource("3_65aak")]

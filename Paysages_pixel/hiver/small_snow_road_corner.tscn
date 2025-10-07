@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://cros55jva1ecw"]
+
+[ext_resource type="Texture2D" uid="uid://7v3t2pfwv1i4" path="res://modules/Paysages_pixel/hiver/glb/snow_road_corner_0.png" id="1_4n4rs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qicm6"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_4n4rs")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r0mfm"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.015625, -0.5, 1, 0.0625, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAP//AAAAAAAA////////AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jp1mk"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.015625, -0.5, 1, 0.0625, 1),
+"attribute_data": PackedByteArray("AAD/LwAA/x//D/8fAAD/L/8P/x//D/8v"),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUA"),
+"material": SubResource("StandardMaterial3D_qicm6"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP///78AAAAAAAD/v///AAAAAP+/AAAAAP//ksL//wAAAACSwv///////5LC////f////3////9/OvxOhzr8Toc6/E6H")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r0mfm")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kiske"]
+data = PackedVector3Array(-0.5, -0.0156, 0.5, -0.5, -0.0156, -0.5, 0.5, -0.0156, -0.5, -0.5, -0.0156, 0.5, 0.5, -0.0156, -0.5, 0.5, 0.0469, 0.5)
+
+[node name="small_snow_road_corner" type="Node3D"]
+
+[node name="snow_road_corner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011, 0)
+mesh = SubResource("ArrayMesh_jp1mk")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="snow_road_corner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="snow_road_corner/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kiske")

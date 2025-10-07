@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://bxb8wiyd023ai"]
+
+[ext_resource type="Texture2D" uid="uid://brndpb0nx4uew" path="res://Textures/winter_texture.png" id="1_ymk6y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6kcb"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_ymk6y")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0j3cr"]
+_surfaces = [{
+"aabb": AABB(-1, -0.03125, -1.99995, 2, 0.0625, 4),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAACAAQABQAAAAQABQAEAAYABwAAAAUABwAIAAAACAABAAAACAAJAAEAAQAKAAMACQAKAAsACgAMAAMACQANAAoACgAOAAwADQAOAAoADQAPAA4A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/3////6/AAD/f////X8AAP//AAD9fwAA//8AAP4/AAD//wAA/r8AAP9/AAD+/wAA//8AAP7/AAAAAAAA//8AAAAA///+vwAAAAAAAP9/AAD/f////j8AAP9///8AgAAA//8AAAAAAAAAAP//AUAAAP9/AAAAAAAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k2u30"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1, -0.03125, -1.99995, 2, 0.0625, 4),
+"attribute_data": PackedByteArray("/w//H/8P/w8AAP8P/w//HwAA/w8AAP8f/w//H/8P/w8AAP8P/w//HwAA/w8AAP8fAAD/L/8P/y//D/8fAAD/L/8P/x8AAP8f/w//L/8P/x8AAP8f/w//LwAA/x8AAP8vAAD/H/8P/x//D/8PAAD/H/8P/w8AAP8P/w//DwAA/w8AAP8f/w//DwAA/x//D/8f/w//D/8PAAAAAAAA/w//DwAAAAAAAP8PAAD/D/8P/w//DwAAAAD/D/8PAAAAAAAA"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8A"),
+"material": SubResource("StandardMaterial3D_c6kcb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("/3////6/zAH/f////X/MAf//AAD9f8wB/3////6/zAH//wAA/X/MAf//AAD+v8wB/3////1/zAH/f////j/MAf//AAD+P8wB/3////1/zAH//wAA/j/MAf//AAD9f8wB/38AAP7/iS3/f////r+JLf//AAD+v4kt/38AAP7/qir//wAA/r+qKv//AAD+/6oq/3////4/AAD/fwAAAAAAAP//AAAAAAAA/3////4/zAH//wAAAADMAf//AAD+P8wBAAAAAP//HiwAAP///r8eLP9////+vx4sAAAAAP//Hiz/f////r8eLP9/AAD+/x4sAAD//wFALikAAAAAAAAuKf9/AAAAAC4pAAD//wFALin/fwAAAAAuKf9////+Py4pAAD///6/vgEAAAAA/3++Af9////9f74BAAD///6/AAD/f////X8AAP9////+vwAAAAAAAP9/HiwAAP//AUAeLP9////+Px4sAAAAAP9/Lin/f////j8uKf9///8AgC4pAz/3AQM/9wEDP/cBAz/3AQM/9wEDP/cBAz/3AQM/9wEDP/cBAz/3AQM/9wEDP/cBZtTMKGbUzChm1MwoVNWqKlTVqipU1aoq/3/+wf9//sH/f/7BAz/3AQM/9wEDP/cBOtbEKTrWxCk61sQpOtbEKTrWxCk61sQpiquKq4qriquKq4qriquLq4qri6uKq4ur+X3ywPl98sD5ffLA/3//v/9//7//f/+/OtbEKTrWxCk61sQpFteLKxbXiysW14sr")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0j3cr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gncof"]
+data = PackedVector3Array(0, 0.0313, 1, 0, 0.0313, -0.0001, 1, -0.0313, -0.0001, 0, 0.0313, 1, 1, -0.0313, -0.0001, 1, -0.0313, 1, 0, 0.0313, -0.0001, 0, 0.0313, -1.0001, 1, -0.0313, -1.0001, 0, 0.0313, -0.0001, 1, -0.0313, -1.0001, 1, -0.0313, -0.0001, 0, -0.0313, 2, 0, 0.0313, 1, 1, -0.0313, 1, 0, -0.0313, 2, 1, -0.0313, 1, 1, -0.0313, 2, 0, 0.0313, -1.0001, 0, -0.0313, -2, 1, -0.0313, -2, 0, 0.0313, -1.0001, 1, -0.0313, -2, 1, -0.0313, -1.0001, -1, -0.0313, 2, -1, 0.0313, 1, 0, 0.0313, 1, -1, -0.0313, 2, 0, 0.0313, 1, 0, -0.0313, 2, -1, 0.0313, -0.9999, -1, -0.0313, -2, 0, -0.0313, -2, -1, 0.0313, -0.9999, 0, -0.0313, -2, 0, 0.0313, -1.0001, -1, 0.0313, 1, -1, -0.0313, 0, 0, 0.0313, -0.0001, -1, 0.0313, 1, 0, 0.0313, -0.0001, 0, 0.0313, 1, -1, -0.0313, 0, -1, 0.0313, -0.9999, 0, 0.0313, -1.0001, -1, -0.0313, 0, 0, 0.0313, -1.0001, 0, 0.0313, 0.0001)
+
+[node name="snow_noway" type="Node3D"]
+
+[node name="NOWAY" type="MeshInstance3D" parent="."]
+layers = 17
+mesh = SubResource("ArrayMesh_k2u30")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NOWAY"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NOWAY/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gncof")

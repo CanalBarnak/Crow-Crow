@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://do1y5uc5v0hii"]
+
+[ext_resource type="Texture2D" uid="uid://brndpb0nx4uew" path="res://Textures/winter_texture.png" id="1_3p301"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_berv0"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_3p301")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rtgmq"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAP//AAAAAAAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_per0n"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/2//L/9v/x//f/8f/2//L/9//x//f/8v"),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUA"),
+"material": SubResource("StandardMaterial3D_berv0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP///78AAAAAAAD/v///AAAAAP+/AAAAAP///7///wAAAAD/v///AAD///+/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rtgmq")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3p301"]
+data = PackedVector3Array(-0.5, 0, 0.5, -0.5, 0, -0.4999, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5)
+
+[node name="sno_inner_grass" type="Node3D"]
+
+[node name="sno_inner_grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0)
+mesh = SubResource("ArrayMesh_per0n")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="sno_inner_grass"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sno_inner_grass/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_3p301")

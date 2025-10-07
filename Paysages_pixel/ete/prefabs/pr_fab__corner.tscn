@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://byr2hcaxqa34x"]
+
+[ext_resource type="PackedScene" uid="uid://dpq8wxcq1op8j" path="res://modules/Paysages_pixel/ete/chemin tournant pixel/tournant.tscn" id="1_ci3pr"]
+[ext_resource type="PackedScene" uid="uid://cc1j5lciw4s6k" path="res://modules/Paysages_pixel/ete/base_uphill/base_uphill.tscn" id="2_simnv"]
+[ext_resource type="PackedScene" uid="uid://cndhjpj0sjggx" path="res://modules/Paysages_pixel/ete/ligne/chemin_p_ligne.tscn" id="3_jix72"]
+[ext_resource type="PackedScene" uid="uid://fjoyjv2o01yh" path="res://modules/Paysages_pixel/ete/uphill/uphill.tscn" id="4_d5fxi"]
+[ext_resource type="PackedScene" uid="uid://ho7i6fyowxk7" path="res://modules/Paysages_pixel/ete/uphill_corner/uphill_corner.tscn" id="5_simnv"]
+
+[node name="PrFab- corner" type="Node3D"]
+
+[node name="tournant" parent="." instance=ExtResource("1_ci3pr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 2)
+
+[node name="base_uphill" parent="." instance=ExtResource("2_simnv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="chemin_p_ligne" parent="." instance=ExtResource("3_jix72")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+
+[node name="chemin_p_ligne2" parent="." instance=ExtResource("3_jix72")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 2)
+
+[node name="uphill" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
+
+[node name="uphill2" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -2, 0, 0)
+
+[node name="uphill3" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, -1, 0, 4)
+
+[node name="uphill4" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 0, 0, 4)
+
+[node name="uphill5" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 1, 0, 4)
+
+[node name="uphill6" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 2, 0, 4)
+
+[node name="uphill7" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 3, 0, 4)
+
+[node name="uphill8" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 4, 0, 4)
+
+[node name="uphill9" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, 3)
+
+[node name="uphill10" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, 2)
+
+[node name="uphill11" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, 1)
+
+[node name="uphill12" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, 0)
+
+[node name="uphill13" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, -1)
+
+[node name="uphill14" parent="." instance=ExtResource("4_d5fxi")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 4, 0, -2)
+
+[node name="uphill_corner" parent="." instance=ExtResource("5_simnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)

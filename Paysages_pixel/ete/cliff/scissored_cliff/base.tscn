@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci84ge5dtq0l5"]
+
+[ext_resource type="PackedScene" uid="uid://b806uwk5aw16k" path="res://modules/Paysages_pixel/ete/cliff/cliff_root.tscn" id="1_cm03a"]
+[ext_resource type="PackedScene" uid="uid://dywusdolm11m" path="res://modules/Paysages_pixel/ete/cliff/cliff_root_inner.tscn" id="2_y2d0h"]
+[ext_resource type="PackedScene" uid="uid://cc1j5lciw4s6k" path="res://modules/Paysages_pixel/ete/base_uphill/base_uphill.tscn" id="3_8xouq"]
+
+[node name="base" type="Node3D"]
+
+[node name="cliff_root" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 1)
+
+[node name="cliff_root3" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, -1.5, 0)
+
+[node name="cliff_root2" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.5, 1)
+
+[node name="cliff_root4" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1.5, 2)
+
+[node name="cliff_root5" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, -1.5, 0)
+
+[node name="cliff_root6" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, -1.5, -1)
+
+[node name="cliff_root7" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2, -1.5, -2)
+
+[node name="cliff_root8" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, -1.5, -2)
+
+[node name="cliff_root9" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -1.5, -2)
+
+[node name="cliff_root10" parent="." instance=ExtResource("1_cm03a")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, -1.5, -2)
+
+[node name="cliff_root_inner" parent="." instance=ExtResource("2_y2d0h")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.5, -1, 1.5)
+
+[node name="cliff_root_inner3" parent="." instance=ExtResource("2_y2d0h")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3.5, -1, 1.5)
+
+[node name="cliff_root_inner4" parent="." instance=ExtResource("2_y2d0h")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -3.5, -1, -1.5)
+
+[node name="cliff_root_inner2" parent="." instance=ExtResource("2_y2d0h")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.5, -1, 0.5)
+
+[node name="cliff_root_inner5" parent="." instance=ExtResource("2_y2d0h")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, -1, -1.5)
+
+[node name="base_uphill" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -5, -2, -2)
+
+[node name="base_uphill9" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -4, -2, -3)
+
+[node name="base_uphill3" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, -2, 3)
+
+[node name="base_uphill6" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, -2, 2)
+
+[node name="base_uphill4" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, -2, 3)
+
+[node name="base_uphill5" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -2, 2)
+
+[node name="base_uphill2" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, -2, 1)
+
+[node name="base_uphill8" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, -2, -3)
+
+[node name="base_uphill7" parent="." instance=ExtResource("3_8xouq")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, -2, -2)

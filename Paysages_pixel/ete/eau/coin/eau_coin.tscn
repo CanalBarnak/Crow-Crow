@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=4 uid="uid://b8vu3x01c0p8c"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_biqiq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ec1yk"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_biqiq")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1aq0q"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAP//AAAAAAAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_37hlr"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/y//D/gf9w8AIP8f/y//DwAg/x//L/8f"),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUA"),
+"material": SubResource("StandardMaterial3D_ec1yk"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP//pCoAAAAAAACeKv//AAAAAKQqAAAAAP//pCr//wAAAACkKv//AAD//6oqoqqtqpuqsaqiqq2qoqqtqqKqraqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1aq0q")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvj87"]
+size = Vector3(0.5, 0.01, 1)
+
+[node name="Eau_coin" type="Node3D"]
+
+[node name="corner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.03, 0.5)
+layers = 17
+mesh = SubResource("ArrayMesh_37hlr")
+skeleton = NodePath("")
+
+[node name="Area3D" type="StaticBody3D" parent="corner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.493177)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corner/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.5)
+shape = SubResource("BoxShape3D_vvj87")
+
+[node name="Area3D2" type="StaticBody3D" parent="corner"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, -0.493177)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corner/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.5)
+shape = SubResource("BoxShape3D_vvj87")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=4 uid="uid://ch3i8fcj02sd8"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_3vws6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iipja"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_3vws6")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8c7c0"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -1.00003, 1, 1e-05, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAABAAUABAAGAAEA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray("//8AAAGAAAAAAAAAAYAAAAAAAAADAAAA//8AAAAAAAD//wAA+/8AAP//AAABgAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e2txb"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -1.00003, 1, 1e-05, 2),
+"attribute_data": PackedByteArray("/z//L/8//x//L/8f/z//L/8v/x//L/8v/z//L/8//x//L/8f/z//L/8v/x//L/8v"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsA"),
+"material": SubResource("StandardMaterial3D_iipja"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("//8AAAGAqioAAAAAAYCqKgAAAAADAKoq//8AAAGAqioAAAAAAwCqKv//AAAAAKoq//8AAPv/qioAAAAA//+qKgAAAAABgKoq//8AAPv/qioAAAAAAYCqKv//AAABgKoqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8c7c0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhmf3"]
+size = Vector3(0.5, 0.01, 1)
+
+[node name="rebord" type="Node3D"]
+
+[node name="border" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.03, 0)
+layers = 17
+mesh = SubResource("ArrayMesh_e2txb")
+skeleton = NodePath("")
+
+[node name="Area3D" type="StaticBody3D" parent="border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.493177)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="border/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
+shape = SubResource("BoxShape3D_bhmf3")
+
+[node name="Area3D2" type="StaticBody3D" parent="border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.506823)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="border/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
+shape = SubResource("BoxShape3D_bhmf3")

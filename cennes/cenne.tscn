@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://ck4qkyxyyxlrn"]
+
+[ext_resource type="PackedScene" uid="uid://bqwbqrm437yrm" path="res://scènes/cennes/glb/coin.glb" id="1_hu8q2"]
+[ext_resource type="Script" uid="uid://bgi3mlttkc5xd" path="res://scènes/cennes/scripts/cenne.gd" id="2_7tc2k"]
+[ext_resource type="Script" uid="uid://d0bgghtkkytt1" path="res://scènes/cennes/scripts/rotation.gd" id="2_c5hvm"]
+[ext_resource type="PackedScene" uid="uid://ca5rgmfx2t26m" path="res://scènes/cennes/glb/poisson.glb" id="2_y7b8v"]
+[ext_resource type="AudioStream" uid="uid://dlibef2rhl2xf" path="res://scènes/cennes/audio/coin_collect.wav" id="4_03uir"]
+[ext_resource type="PackedScene" uid="uid://eep2jq456act" path="res://scènes/cennes/glb/Crystal/crystal_bleu.glb" id="5_i0xk8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8j7x"]
+radius = 58.8756
+height = 177.987
+
+[node name="cenne" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 1.0198, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_7tc2k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -97.9759, 0)
+shape = SubResource("CapsuleShape3D_s8j7x")
+
+[node name="poisson" parent="Area3D/CollisionShape3D" instance=ExtResource("2_y7b8v")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -21.06)
+visible = false
+script = ExtResource("2_c5hvm")
+
+[node name="coin" parent="Area3D/CollisionShape3D" instance=ExtResource("1_hu8q2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 97.9759, 0)
+visible = false
+script = ExtResource("2_c5hvm")
+
+[node name="Crystal" parent="Area3D/CollisionShape3D" instance=ExtResource("5_i0xk8")]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, -83.6362, 0)
+script = ExtResource("2_c5hvm")
+
+[node name="CoinCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_03uir")
+volume_db = -40.0
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

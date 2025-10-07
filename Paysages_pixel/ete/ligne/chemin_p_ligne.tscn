@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://cndhjpj0sjggx"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_s70tj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21o5v"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_s70tj")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d8txt"]
+_surfaces = [{
+"aabb": AABB(-1, -0.03125, -1.99996, 2, 0.0625, 4),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAABAAAABAAFAAEABgAEAAAABwAAAAMABgAAAAcABwADAAgACQAGAAcACgAHAAgACQAHAAoACwAJAAoACgAIAAwACwAKAA0ADQAKAAwADQAMAA4A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 15,
+"vertex_data": PackedByteArray("/3////8/AAD/fwAAAAAAAP//AAAAAAAA//////8/AAAAAP///z8AAAAAAAAAAAAAAAAAAP5/AAD/fwAA/n8AAP//AAD+fwAAAAD///6/AAD/f////r8AAAAAAAD//wAA//////6/AAD/fwAA//8AAP//AAD9/wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jhca4"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1, -0.03125, -1.99996, 2, 0.0625, 4),
+"attribute_data": PackedByteArray("/w//HwAA/x8AAP8P/w//HwAA/w//D/8P/w//HwAA/x8AAP8P/w//HwAA/w//D/8P/w8AAP8P/w8AAP8P/w8AAAAA/w8AAAAA/w8AAP8P/w8AAP8P/w8AAAAA/w8AAAAA/w8AAP8P/w8AAP8P/w8AAAAA/w8AAAAA/w8AAP8P/w8AAP8P/w8AAAAA/w8AAAAAAAD/D/8P/w//D/8fAAD/D/8P/x8AAP8fAAD/D/8P/w//D/8fAAD/D/8P/x8AAP8f"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8A"),
+"material": SubResource("StandardMaterial3D_21o5v"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("/3////8/0Nb/fwAAAADQ1v//AAAAANDW/3////8/0Nb//wAAAADQ1v//////P9DWAAD///8/0NYAAAAAAADQ1v9/AAAAANDWAAD///8/0Nb/fwAAAADQ1v9/////P9DWAAAAAP5///8AAP///z////9/////P///AAAAAP5/////f////z////9/AAD+f///AAD///6///8AAAAA/n////9/AAD+f///AAD///6/////fwAA/n////9////+v////38AAP5/////f////z//////////P////38AAP5//////////z//////AAD+f////3////6/////fwAA/n//////AAD+f////3////6//////wAA/n/////////+v////38AAP//4NP/f////r/g0//////+v+DT/38AAP//4NP//////r/g0///AAD9/+DTAAAAAP//4NMAAP///r/g0/9////+v+DTAAAAAP//4NP/f////r/g0/9/AAD//+DTiquKq4qriquKq4qriquKq4qriquKq4qriquKq4qriquKq4qriquKq4qriquKq4qr/3//vf9//73/f/+9/3//vf9//73/f/+9/3/+wf9//sH/f/7B/3/+wf9//sH/f/7B/3//vf9//73/f/+9/3//vf9//73/f/+9/3/+wf9//sH/f/7B/3/+wf9//sH/f/7BOtbEKTrWxCk61sQpOtbEKTrWxCk61sQpOtbEKTrWxCk61sQpOtbEKTrWxCk61sQp")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d8txt")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qq5ft"]
+data = PackedVector3Array(0, 0.0313, -1, 0, -0.0313, -2, 1, -0.0313, -2, 0, 0.0313, -1, 1, -0.0313, -2, 1, 0.0313, -1, -1, 0.0313, -1, -1, -0.0313, -2, 0, -0.0313, -2, -1, 0.0313, -1, 0, -0.0313, -2, 0, 0.0313, -1, -1, -0.0313, -0.0001, -1, 0.0313, -1, 0, 0.0313, -1, -1, -0.0313, -0.0001, 0, 0.0313, -1, 0, -0.0313, -0.0001, -1, 0.0313, 1, -1, -0.0313, -0.0001, 0, -0.0313, -0.0001, -1, 0.0313, 1, 0, -0.0313, -0.0001, 0, 0.0313, 1, 0, -0.0313, -0.0001, 0, 0.0313, -1, 1, 0.0313, -1, 0, -0.0313, -0.0001, 1, 0.0313, -1, 1, -0.0313, -0.0001, 0, 0.0313, 1, 0, -0.0313, -0.0001, 1, -0.0313, -0.0001, 0, 0.0313, 1, 1, -0.0313, -0.0001, 1, 0.0313, 1, 0, -0.0313, 2, 0, 0.0313, 1, 1, 0.0313, 1, 0, -0.0313, 2, 1, 0.0313, 1, 1, -0.0313, 1.9999, -1, -0.0313, 2, -1, 0.0313, 1, 0, 0.0313, 1, -1, -0.0313, 2, 0, 0.0313, 1, 0, -0.0313, 2)
+
+[node name="chemin_p_ligne" type="Node3D"]
+
+[node name="path" type="MeshInstance3D" parent="."]
+layers = 17
+mesh = SubResource("ArrayMesh_jhca4")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qq5ft")

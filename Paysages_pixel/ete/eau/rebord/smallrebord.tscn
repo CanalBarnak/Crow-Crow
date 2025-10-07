@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=4 uid="uid://cw5lf4qv0t6s7"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_8do14"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndlm4"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_8do14")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_knsae"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.500025, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAGAAAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3b6og"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.500025, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/z//L/8//x//L/8f/z//L/8v/x//L/8v"),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUA"),
+"material": SubResource("StandardMaterial3D_ndlm4"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("//8AAP//qioAAAAA//+qKgAAAAAGAKoq//8AAP//qioAAAAABgCqKv//AAAAAKoqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_knsae")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u4mv7"]
+size = Vector3(0.5, 0.01, 1)
+
+[node name="small_rebord" type="Node3D"]
+
+[node name="smallborder" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.03, -0.5)
+layers = 17
+mesh = SubResource("ArrayMesh_3b6og")
+skeleton = NodePath("")
+
+[node name="Area3D" type="StaticBody3D" parent="smallborder"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="smallborder/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
+shape = SubResource("BoxShape3D_u4mv7")

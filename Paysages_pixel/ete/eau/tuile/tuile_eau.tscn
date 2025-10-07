@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=4 uid="uid://dg2213xq0b7vl"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_yvu3m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rmbg"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_yvu3m")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1k65l"]
+_surfaces = [{
+"aabb": AABB(-1.00001, -1.53668e-08, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAABAAAABAAAAAUABAAGAAEABAAHAAYAAQAGAAgAAQAIAAkA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("/38AAP//AAD/fwAA/n8AAP//AAD+fwAA//8AAP//AAADABkC/n8AAAAAGQL//wAA/38AAAMAAAAAAAAAAAAAAP//AAAAAAAA//8AAP5/AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u7dvn"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1.00001, -1.53668e-08, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("/y//H/8//x//P/8P/y//H/8//w//L/8P/z//H/8//w//L/8P/z//H/8v/w//L/8f/y//H/8//x//P/8P/y//H/8//w//L/8P/y//H/8//x//P/8P/y//H/8//w//L/8P"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"material": SubResource("StandardMaterial3D_7rmbg"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/38AAP//qir/fwAA/n+qKv//AAD+f6oq/38AAP//qir//wAA/n+qKv//AAD//6oqAwAZAv5/qir/fwAA/n+qKv9/AAD//6oqAwAZAv5/qyr/fwAA//+rKgAAGQL//6sqAwAZAv5/qSoAAAAAAACpKv9/AAADAKkqAwAZAv5/qir/fwAAAwCqKv9/AAD+f6oq/38AAP5/qir/fwAAAwCqKv//AAAAAKoq/38AAP5/qir//wAAAACqKv//AAD+f6oqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWrKlTVqypU1asqVNWpKlTVqSpU1akqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1k65l")
+
+[node name="tuile eau" type="Node3D"]
+
+[node name="water" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 1)
+mesh = SubResource("ArrayMesh_u7dvn")
+skeleton = NodePath("")

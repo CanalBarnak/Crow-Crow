@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cawd7yupeiajn"]
+
+[ext_resource type="PackedScene" uid="uid://csyvfeklni4km" path="res://modules/Paysages_pixel/ete/cliff/cliff_border.tscn" id="1_70ayu"]
+[ext_resource type="PackedScene" uid="uid://c3j2lxsa6s0tt" path="res://modules/Paysages_pixel/ete/cliff/cliff_corner.tscn" id="2_iwtri"]
+[ext_resource type="PackedScene" uid="uid://ho7i6fyowxk7" path="res://modules/Paysages_pixel/ete/uphill_corner/uphill_corner.tscn" id="3_vcoip"]
+[ext_resource type="PackedScene" uid="uid://bbhc1kocy6864" path="res://modules/Paysages_pixel/ete/gazon/small_grass.tscn" id="4_h4hiv"]
+
+[node name="top" type="Node3D"]
+
+[node name="cliff_border" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 1, 0)
+
+[node name="cliff_border3" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, -1)
+
+[node name="cliff_border7" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 1, -1)
+
+[node name="cliff_border8" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -1, 1, -1)
+
+[node name="cliff_border9" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -2, 1, -1)
+
+[node name="cliff_border10" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -3, 1, -1)
+
+[node name="cliff_border2" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1, 0)
+
+[node name="cliff_corner" parent="." instance=ExtResource("2_iwtri")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 0, 0)
+
+[node name="cliff_corner5" parent="." instance=ExtResource("2_iwtri")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="cliff_corner2" parent="." instance=ExtResource("2_iwtri")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2, 0, 1)
+
+[node name="cliff_border4" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2, 1, 1)
+
+[node name="cliff_border5" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3, 1, 1)
+
+[node name="cliff_border6" parent="." instance=ExtResource("1_70ayu")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3, 1, 0)
+
+[node name="cliff_corner3" parent="." instance=ExtResource("2_iwtri")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3, 0, 1)
+
+[node name="cliff_corner4" parent="." instance=ExtResource("2_iwtri")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -3, 0, -1)
+
+[node name="uphill_corner" parent="." instance=ExtResource("3_vcoip")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0.5, 1)
+
+[node name="Small_grass" parent="." instance=ExtResource("4_h4hiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="Small_grass2" parent="." instance=ExtResource("4_h4hiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -1)
+
+[node name="Small_grass3" parent="." instance=ExtResource("4_h4hiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+
+[node name="Small_grass4" parent="." instance=ExtResource("4_h4hiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -1)
+
+[node name="Small_grass5" parent="." instance=ExtResource("4_h4hiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)

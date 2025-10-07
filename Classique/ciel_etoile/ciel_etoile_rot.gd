@@ -8,5 +8,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	self.rotate_y(-rand_speed)
-	self.position = $"../Joueur".position
+	self.position = $"../Joueur_ship".position
 	

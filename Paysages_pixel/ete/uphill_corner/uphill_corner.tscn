@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://ho7i6fyowxk7"]
+
+[ext_resource type="Texture2D" uid="uid://dhnjcjqdivnfp" path="res://Textures/Volcano_texture.png" id="1_v1noj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyrq1"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_v1noj")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vd1nd"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.375, -0.499963, 1, 0.5, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 245, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8dn7k"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.375, -0.499963, 1, 0.5, 1),
+"attribute_data": PackedByteArray(255, 15, 0, 0, 255, 31, 255, 15, 255, 15, 255, 15, 255, 31, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_dyrq1"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 255, 255, 255, 255, 84, 213, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 245, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vd1nd")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ouxit"]
+data = PackedVector3Array(-0.5, 0.125, 0.5, 0.5, 0.125, -0.5, 0.5, 0.125, 0.4999, -0.5, 0.125, 0.5, -0.5, -0.375, -0.5, 0.5, 0.125, -0.5)
+
+[node name="uphill_corner" type="Node3D"]
+
+[node name="uphill_corner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.342, 0.5)
+layers = 17
+mesh = SubResource("ArrayMesh_8dn7k")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="uphill_corner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.342, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="uphill_corner/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.34, 0.5)
+shape = SubResource("ConcavePolygonShape3D_ouxit")

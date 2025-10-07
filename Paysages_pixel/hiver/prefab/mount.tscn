@@ -1,0 +1,179 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl0ct1i6pyifr"]
+
+[ext_resource type="PackedScene" uid="uid://cm8n460y5rm14" path="res://modules/Paysages_pixel/hiver/sno_inner_road_turn.tscn" id="1_8nbeg"]
+[ext_resource type="PackedScene" uid="uid://cros55jva1ecw" path="res://modules/Paysages_pixel/hiver/small_snow_road_corner.tscn" id="2_lc57x"]
+[ext_resource type="PackedScene" uid="uid://onohvt8g6e3l" path="res://modules/Paysages_pixel/ete/cliff/cliff.tscn" id="3_lk00g"]
+[ext_resource type="PackedScene" uid="uid://bxpdsumcmc5ss" path="res://modules/Paysages_pixel/hiver/sno_road.tscn" id="4_4nt7f"]
+
+[node name="mount" type="Node3D"]
+
+[node name="sno_inner_road_turn" parent="." instance=ExtResource("1_8nbeg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, -0.035, -0.5)
+
+[node name="sno_inner_road_turn2" parent="." instance=ExtResource("1_8nbeg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.5, -0.035, -0.5)
+
+[node name="sno_inner_road_turn3" parent="." instance=ExtResource("1_8nbeg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -0.035, -0.5)
+
+[node name="sno_inner_road_turn4" parent="." instance=ExtResource("1_8nbeg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, -0.035, 0.5)
+
+[node name="small_snow_road_corner" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -0.005, -1.5)
+
+[node name="small_snow_road_corner7" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.5, -0.005, 0.5)
+
+[node name="small_snow_road_corner8" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.5, -0.005, 3.5)
+
+[node name="small_snow_road_corner4" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.005, -1.5)
+
+[node name="small_snow_road_corner5" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.5, -0.005, 3.5)
+
+[node name="small_snow_road_corner2" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, -0.005, -1.5)
+
+[node name="small_snow_road_corner6" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, -0.005, -0.5)
+
+[node name="cliff" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.03, 0.03)
+
+[node name="cliff2" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 0.03, 1.03)
+
+[node name="cliff6" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 0.03, 2.03)
+
+[node name="cliff7" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 0.03, 3.03)
+
+[node name="cliff8" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3, 0.03, 1.03)
+
+[node name="cliff9" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3, 0.03, 2.03)
+
+[node name="cliff10" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3, 0.03, 3.03)
+
+[node name="cliff11" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0.03, 1.03)
+
+[node name="cliff12" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0.03, 2.03)
+
+[node name="cliff13" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0.03, 3.03)
+
+[node name="cliff14" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0.03, 1.03)
+
+[node name="cliff15" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0.03, 2.03)
+
+[node name="cliff16" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0.03, 3.03)
+
+[node name="cliff17" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6, 0.03, 1.03)
+
+[node name="cliff18" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6, 0.03, 2.03)
+
+[node name="cliff19" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6, 0.03, 3.03)
+
+[node name="cliff20" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.03, 1.03)
+
+[node name="cliff21" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.03, 2.03)
+
+[node name="cliff22" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.03, 3.03)
+
+[node name="cliff23" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.03, 1.03)
+
+[node name="cliff24" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.03, 2.03)
+
+[node name="cliff25" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.03, 3.03)
+
+[node name="cliff26" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0.03, 2.03)
+
+[node name="cliff27" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0.03, 3.03)
+
+[node name="cliff3" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0.03, 0.03)
+
+[node name="sno_road" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, -0.03, -1.5)
+
+[node name="small_snow_road_corner3" parent="." instance=ExtResource("2_lc57x")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.5, -0.005, -1.5)
+
+[node name="sno_road2" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.5, -0.03, -1.5)
+
+[node name="cliff4" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0.03, 0.03)
+
+[node name="sno_road3" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5, -0.03, -1.5)
+
+[node name="sno_road5" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.03, -0.5)
+
+[node name="sno_road6" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.03, 0.5)
+
+[node name="sno_road7" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.03, 1.5)
+
+[node name="sno_road8" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.03, 2.5)
+
+[node name="sno_road9" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.5, -0.03, 3.5)
+
+[node name="sno_road10" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, -0.03, 3.5)
+
+[node name="sno_road11" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.5, -0.03, 3.5)
+
+[node name="sno_road12" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, -0.03, 3.5)
+
+[node name="sno_road13" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5, -0.03, 3.5)
+
+[node name="sno_road14" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, -0.03, 3.5)
+
+[node name="sno_road16" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, -0.03, 3.5)
+
+[node name="sno_road17" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, -0.03, 3.5)
+
+[node name="sno_road15" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5, -0.03, 1.5)
+
+[node name="sno_road18" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5, -0.03, 2.5)
+
+[node name="cliff5" parent="." instance=ExtResource("3_lk00g")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6, 0.03, 0.03)
+
+[node name="sno_road4" parent="." instance=ExtResource("4_4nt7f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.5, -0.03, -1.5)
