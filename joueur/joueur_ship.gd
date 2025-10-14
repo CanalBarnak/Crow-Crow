@@ -110,14 +110,14 @@ func _physics_process(_delta: float) -> void:
 		else:
 			pivot_camera.rotation = Vector3.ZERO
 			
-		if Input.is_action_pressed("camera_haut") and gimbal_camera.rotation.x >= -1:
+		if Input.is_action_pressed("camera_haut"): #and gimbal_camera.rotation.x >= -1
 			gimbal_camera.rotate_x(deg_to_rad(-1.8))
 			print("camera haut ",gimbal_camera.rotation.x)
 			#self.rotation.y= gimbal_camera.rotation.y
 		else:
 			pivot_camera.rotation = Vector3.ZERO
 			
-		if Input.is_action_pressed("camera_bas") and gimbal_camera.rotation.x <= 1:
+		if Input.is_action_pressed("camera_bas") : #and gimbal_camera.rotation.x <= 1
 			gimbal_camera.rotate_x(deg_to_rad(1.8))
 			print("camera bas ",gimbal_camera.rotation.x)
 			#self.rotation.y = gimbal_camera.rotation.y
